@@ -2,8 +2,7 @@
 import HomePage from "./component/homePage";
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
-import Pricing from "./component/pricing";
-import Footer from "./component/footer";
+
 
 
 export default function Home() {

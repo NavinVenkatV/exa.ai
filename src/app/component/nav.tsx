@@ -34,7 +34,7 @@ function Nav({ setLogin }: { setLogin: React.Dispatch<React.SetStateAction<boole
                 )}
             </AnimatePresence>
 
-            <nav className='fixed top-4 left-1 md:left-4 md:right-4 right-1 z-50 border border-neutral-600 bg-black px-2 md:px-6 py-2 md:py-3 rounded-xl shadow-lg flex justify-between items-center'>
+            <nav className='fixed top-4 left-1 md:left-4 md:right-4 right-1 z-50  bg-black/40 backdrop-blur-md px-2 md:px-6 py-2 md:py-3 rounded-xl shadow-lg flex justify-between items-center'>
                 <div className='flex flex-col gap-2'>
                     <div className='flex gap-2'>
                         <div

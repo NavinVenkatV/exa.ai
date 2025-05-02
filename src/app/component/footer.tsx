@@ -8,8 +8,6 @@ function Footer() {
     return (
         <div>
             <div className='relative text-white border-1 overflow-hidden border-neutral-600 bg-black  mt-10 p-3 md:p-10  rounded-t-2xl w-[300px] md:w-[1500px] "}'>
-                import Image from 'next/image'
-
                 <Image
                     src="/gradi.png"
                     alt="gradient"
