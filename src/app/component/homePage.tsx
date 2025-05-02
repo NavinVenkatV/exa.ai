@@ -30,8 +30,8 @@ function HomePage() {
           <h1 className='md:text-7xl text-4xl font-bold w-[300px] md:w-[800px]'>
             Chat with the internet not just search it
           </h1>
-          <p className='mt-3 w-[200px] md:w-[600px] text-neutral-500'>
-            Meet Exa, your intelligent research assistant
+          <p className='mt-3 w-[200px] md:w-[600px] text-neutral-400'>
+            {/* Meet Exa, your intelligent research assistant */} Coming soon
           </p>
           <div className='mt-10'>
             <Button title='Get Started' place="dashboard" />
@@ -55,7 +55,7 @@ function HomePage() {
           </div>
         </div>
       </div>
-      <div className="bg-gradient-to-b from-[#0f0f0f] via-[#0b1b33] to-[#000000]">
+      <div className="bg-gradient-to-b from-[#0f0f0f] via-[#0b1b33] mt-10 to-[#000000]">
         <div className="flex justify-center">
           <Pricing />
         </div>
