@@ -57,7 +57,7 @@ const handler = NextAuth({
     callbacks: {
         async session({ session, token }: { session: Session; token: JWT }) {
             if (session.user) {
-                (session.user as any).id = token.id as string;
+                // session.user.id = token.id as string;
                 session.user.image = token.picture as string;
             }
             return session;

@@ -7,7 +7,7 @@ import axios from "axios";
 import Login from "../component/login";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useSession, signOut } from 'next-auth/react'
+import { useSession } from 'next-auth/react'
 
 
 const spaceGrotesk = Space_Grotesk({
@@ -48,7 +48,7 @@ type QueryItem =
     };
 
 function Child() {
-  const { data: session, status } = useSession();
+  const { data: session } = useSession();
   const [greeting, setGreeting] = useState("");
   const [query, setQuery] = useState<QueryItem[]>([]);
   const [input, setInput] = useState("");
