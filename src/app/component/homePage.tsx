@@ -50,7 +50,7 @@ function HomePage() {
               alt=""
               width={1200}
               height={600}
-              className="w-[300px] md:w-[1200px] h-[200px] md:h-[600px] object-cover 
+              className="w-[400px] md:w-[1200px] h-[200px] md:h-[600px] object-cover 
              rounded-2xl mt-7 border-[1px] border-l-green-900 border-t-red-700 border-r-pink-700 border-b-yellow-700"
             />
           </div>

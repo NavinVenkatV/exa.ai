@@ -1,24 +1,24 @@
 "use client"
-import React, {  useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { VscTerminalUbuntu } from 'react-icons/vsc'
 import { useRouter } from 'next/navigation'
-// import { useSession, signOut } from 'next-auth/react'
+import { useSession, signOut } from 'next-auth/react'
 import { AnimatePresence, motion } from "framer-motion";
 import Hamburger from 'hamburger-react'
+import Image from 'next/image'
 
 function Nav({ setLogin }: { setLogin: React.Dispatch<React.SetStateAction<boolean>> }) {
     const router = useRouter();
-    // const { data: session, status } = useSession();
+    const { data: session, status } = useSession();
     const [user, setUser] = useState(false);
     const [profile, setProfile] = useState(false);
     const [isOpen, setOpen] = useState(false);
 
     useEffect(() => {
-        // if (status === 'authenticated') {
-        //     setUser(true)
-        // }
-        setUser(true)
-    }, [])
+        if (status === 'authenticated') {
+            setUser(true)
+        }
+    }, [status])
 
     return (
         <>
@@ -66,14 +66,14 @@ function Nav({ setLogin }: { setLogin: React.Dispatch<React.SetStateAction<boole
                         </button>
                     ) : (
                         <div className='relative z-0'>
-                            {/* <Image
+                            <Image
                                 onClick={() => setProfile(prev => !prev)}
                                 src={session?.user?.image || ''} // Provide a fallback image if user image is undefined
                                 alt="user"
                                 width={30}   // Width of 30px
                                 height={30}  // Height of 30px
                                 className="cursor-pointer hover:border-2 hover:border-white rounded-full"
-                            /> */}
+                            />
                             {profile && (
                                 <motion.div
                                     initial={{ opacity: 0, y: -20 }}
@@ -81,10 +81,10 @@ function Nav({ setLogin }: { setLogin: React.Dispatch<React.SetStateAction<boole
                                     transition={{ duration: 0.2, ease: 'easeInOut' }}
                                     className='absolute top-12 right-0 bg-black text-white p-4 rounded-xl w-auto shadow-md'>
                                     <p className='text-sm flex gap-1 items-center whitespace-nowrap'>
-                                        {/* <span className=''>{session?.user?.name}</span> */}
+                                        <span className=''>{session?.user?.name}</span>
                                     </p>
                                     <button
-                                        // onClick={() => signOut()}
+                                        onClick={() => signOut()}
                                         className='mt-2 text-sm bg-neutral-800 hover:bg-neutral-900 transition-all duration-300 ease-in-out cursor-pointer text-white w-full p-1 rounded-full text-center'>
                                         Sign Out
                                     </button>
@@ -121,7 +121,7 @@ function Nav({ setLogin }: { setLogin: React.Dispatch<React.SetStateAction<boole
                                     ) : (
                                         <li
                                             onClick={() => {
-                                                // signOut()
+                                                signOut()
                                                 setOpen(false)
                                             }}
                                             className="cursor-pointer bg-neutral-700 px-2 text-white text-center rounded-full py-1 hover:bg-neutral-800"

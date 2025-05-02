@@ -28,7 +28,7 @@ function Login({ setLogin }: {   setLogin: React.Dispatch<React.SetStateAction<b
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: 'easeInOut' }}
             className=' bg-gradient-to-br from-[#1a1a1a] via-[#243447] to-[#000000]
- rounded-2xl w-[280px] md:w-[600px] h-[400px] text-white flex justify-center'>
+ rounded-2xl w-[350px] md:w-[600px] h-[400px] text-white flex justify-center'>
             <div className='flex flex-col justify-center'>
                 <div className='text-center'>
                     <div className='text-3xl md:text-4xl'>Welcome Back!</div>

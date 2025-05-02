@@ -7,6 +7,8 @@ import axios from "axios";
 import Login from "../component/login";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useSession, signOut } from 'next-auth/react'
+
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -46,6 +48,7 @@ type QueryItem =
     };
 
 function Child() {
+  const { data: session, status } = useSession();
   const [greeting, setGreeting] = useState("");
   const [query, setQuery] = useState<QueryItem[]>([]);
   const [input, setInput] = useState("");
@@ -124,8 +127,8 @@ function Child() {
           <div className="w-full max-w-screen-lg mx-auto">
             {!showChatUi && (
               <>
-                <h1 className="text-2xl md:text-5xl text-center mt-10">{greeting}, Navin</h1>
-                <p className="text-md md:text-2xl text-center mb-10 text-neutral-500">
+                <h1 className="text-2xl md:text-5xl text-center mt-10">{greeting} {session?.user ? session.user.name : ""}</h1>
+                <p className="text-md md:text-2xl mt-4 text-center mb-10 text-neutral-500">
                   How can I help you today?
                 </p>
               </>
