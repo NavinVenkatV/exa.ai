@@ -9,7 +9,7 @@ interface Typess {
 
 function PriceBox({ title1, title2, context, price }: Typess) {
     return (
-            <div className={`text-white border-1 bg-black border-black ${title1 === "Premium" && 'bg-dark-gradient border-3'} mt-10 p-10 rounded-xl w-[400px] h-auto md:h-[400px]"}`}>
+            <div className={`text-white border-1 bg-black border-black ${title1 === "Premium" && 'bg-dark-gradient border-3'} mt-10 p-10 rounded-xl w-[350px] h-auto md:h-[400px]"}`}>
             <div className="flex justify-between">
                 <p className="text-neutral-500 text-xl">{title1}</p>
                 {title1 === 'Premium' && <p className="bg-neutral-800 hidden md:flex px-2 rounded-full  items-center text-sm font-bold">Recommended</p>}

@@ -1,6 +1,7 @@
 import React from 'react'
 import PriceBox from './priceBox'
 
+import { motion } from 'framer-motion'
 
 const item1 = ['10 AI Potraits', 'Basic Styles', '24h Support', 'Basic Export']
 const item2 = [
@@ -27,9 +28,13 @@ function Pricing() {
       <div className="relative z-10">
         <div className="flex px-5 justify-center items-center text-center">
           <div>
-            <div className="text-3xl md:text-6xl">
+            <motion.div
+            initial={{ opacity: 0, x:-40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+             className="text-3xl md:text-6xl">
             Simple plans. No hidden fees.
-            </div>
+            </motion.div>
             <p className="mt-3 text-sm md:text-md text-neutral-500">
               Choose the perfect plan for your needs. No hidden fees.
             </p>

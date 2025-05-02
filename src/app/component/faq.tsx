@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 import { ChevronDown } from 'lucide-react' // fix import
-
+import {motion} from "framer-motion"
 const faqs = [
     {
         question: "What is Exa?",
@@ -34,7 +34,11 @@ function Faq() {
 
     return (
         <div className='my-10 w-full'>
-            <p className='text-3xl md:text-6xl text-center'>Have Questions? Exa has answers.</p>
+            <motion.p
+                initial={{ opacity: 0, x:40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, ease: 'easeInOut' }}
+             className='text-3xl md:text-6xl text-center'>Have Questions? Exa has answers.</motion.p>
             <div className="md:w-full max-w-xl mx-auto w-[350px] py-4">
                 {faqs.map((q, i) => (
                     <div className='mt-10 ' key={i}>
