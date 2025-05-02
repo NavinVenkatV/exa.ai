@@ -25,9 +25,9 @@ function Pricing() {
  rounded-2xl w-full max-w-[1400px] mx-auto  text-white py-10 overflow-hidden">
 
       <div className="relative z-10">
-        <div className="flex justify-center items-center text-center">
+        <div className="flex px-5 justify-center items-center text-center">
           <div>
-            <div className="text-xl md:text-5xl ">
+            <div className="text-3xl md:text-6xl">
             Simple plans. No hidden fees.
             </div>
             <p className="mt-3 text-sm md:text-md text-neutral-500">

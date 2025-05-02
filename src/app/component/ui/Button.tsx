@@ -12,7 +12,7 @@ import {
 } from "framer-motion";
 
 function Button({title, place} : {
-    title: string,
+    title?: string,
     place ?: string
 }) {
     const router = useRouter();

@@ -150,10 +150,12 @@ function Child() {
                             <p className="text-xl md:text-2xl">{res.title}</p>
                             {res.image && (
                               <Image
-                                src={res.image}
-                                alt="Result"
-                                className="w-full h-[300px] md:h-[400px] mt-3 rounded-xl object-cover"
-                              />
+                              src={res.image}
+                              alt="Result"
+                              width={800}
+                              height={400}
+                              className="w-full h-[300px] md:h-[400px] mt-3 rounded-xl object-cover"
+                            />
                             )}
                             <div className="text-neutral-400">{renderTextWithLinks(cleanText(res.text))}</div>
                             <div className="flex justify-between text-sm text-neutral-500">

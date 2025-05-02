@@ -8,6 +8,7 @@ import Login from './login'
 import Image from 'next/image'
 import Pricing from './pricing'
 import Footer from './footer'
+import Faq from './faq'
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin']
@@ -58,6 +59,9 @@ function HomePage() {
       <div className="bg-gradient-to-b from-[#0f0f0f] via-[#0b1b33] mt-10 to-[#000000]">
         <div className="flex justify-center">
           <Pricing />
+        </div>
+        <div className='flex justify-center '>
+          <div><Faq/></div>
         </div>
         <div className="mt-4 w-full h-full flex items-center justify-center">
         <Footer/>
