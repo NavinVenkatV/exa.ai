@@ -3,8 +3,7 @@ import { type NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
 import bcrypt from "bcrypt";
-import { PrismaClient } from "../db/generated/prisma";
-const prisma = new PrismaClient();
+import { prisma } from "../db/index";
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -51,20 +50,19 @@ export const authOptions: NextAuthOptions = {
   ],
   secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
-    async session({ session, token }) {
-      if (session.user) {
-        //@ts-ignore
-        session.user.id = token.id as string;
-        session.user.image = token.picture as string;
-      }
-      return session;
-    },
-    async jwt({ token, user }) {
-      if (user) {
-        token.id = user.id;
-      }
-      return token;
-    },
+    // async session({ session, token }) {
+    //   if (session.user) {
+    //     session.user.id = token.id as string;
+    //     session.user.image = token.picture as string;
+    //   }
+    //   return session;
+    // },
+    // async jwt({ token, user }) {
+    //   if (user) {
+    //     token.id = user.id;
+    //   }
+    //   return token;
+    // },
     async signIn({ user, account }) {
       if (account?.provider === "google" && user.email) {
         let existingUser = await prisma.user.findUnique({

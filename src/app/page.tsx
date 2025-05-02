@@ -29,14 +29,6 @@ export default function Home() {
         
         <HomePage />
       </div>
-      <div className="bg-gradient-to-b to-blue-950 pt-10 from-black">
-        <div className="flex justify-center">
-          <Pricing />
-        </div>
-        <div className="mt-4 w-full h-full flex items-center justify-center">
-        <Footer/>
-        </div>
-      </div>
     </main>
   );
 }

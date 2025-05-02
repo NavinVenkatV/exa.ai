@@ -5,8 +5,9 @@ import { useRouter } from 'next/navigation'
 import { useSession, signOut } from 'next-auth/react'
 import { AnimatePresence, motion } from "framer-motion";
 import Hamburger from 'hamburger-react'
+import Image from 'next/image'
 
-function Nav({ setLogin }: { setLogin: any }) {
+function Nav({ setLogin }: { setLogin: React.Dispatch<React.SetStateAction<boolean>> }) {
     const router = useRouter();
     const { data: session, status } = useSession();
     const [user, setUser] = useState(false);
@@ -65,13 +66,13 @@ function Nav({ setLogin }: { setLogin: any }) {
                         </button>
                     ) : (
                         <div className='relative z-0'>
-                            <img
-                                onClick={() => {
-                                    setProfile(prev => !prev)
-                                }}
-                                src={session?.user?.image || ""}
+                            <Image
+                                onClick={() => setProfile(prev => !prev)}
+                                src={session?.user?.image || ''} // Provide a fallback image if user image is undefined
                                 alt="user"
-                                className='w-[30px] h-[30px] cursor-pointer hover:border-2 hover:border-white rounded-full'
+                                width={30}   // Width of 30px
+                                height={30}  // Height of 30px
+                                className="cursor-pointer hover:border-2 hover:border-white rounded-full"
                             />
                             {profile && (
                                 <motion.div

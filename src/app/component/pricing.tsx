@@ -1,12 +1,6 @@
 import React from 'react'
-import { Great_Vibes } from 'next/font/google'
 import PriceBox from './priceBox'
 
-const great = Great_Vibes({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: '400',
-})
 
 const item1 = ['10 AI Potraits', 'Basic Styles', '24h Support', 'Basic Export']
 const item2 = [

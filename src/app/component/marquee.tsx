@@ -1,5 +1,6 @@
 import React from 'react'
 import {motion} from "framer-motion"
+import Image from 'next/image';
 
 const uMarquee = [
     '01.svg',
@@ -40,7 +41,14 @@ function Marquee({from, to} : Typess) {
         className="flex flex-shrink-0"
       >
         {uMarquee.map((image, index) => {
-          return <img className="h-36 w-48 pr-20" src={image} key={index} />;
+          return  <Image
+          alt="img"
+          src={image}
+          key={index}
+          width={192}   // same as w-48 (48 * 4 = 192px)
+          height={144}  // same as h-36 (36 * 4 = 144px)
+          className="pr-20"
+        />;
         })}
       </motion.div>
 
@@ -51,7 +59,15 @@ function Marquee({from, to} : Typess) {
         className="flex flex-shrink-0"
       >
         {uMarquee.map((image, index) => {
-          return <img className="h-36 w-48 pr-20" src={image} key={index} />;
+          return   <Image
+          alt="img"
+          src={image}
+          key={index}
+          width={192}   // same as w-48 (48 * 4 = 192px)
+          height={144}  // same as h-36 (36 * 4 = 144px)
+          className="pr-20"
+        />
+      ;
         })}
       </motion.div>
     </div>

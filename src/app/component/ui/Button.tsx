@@ -33,8 +33,11 @@ function Button({title, place} : {
     return (
         <div
         onClick={() => {
-            {place != "" &&  router.push(`/${place}`)}
+            if (place !== "") {
+                router.push(`/${place}`);
+            }
         }}
+        
         >
             <motion.button
             style={{

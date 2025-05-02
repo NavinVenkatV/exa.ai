@@ -1,17 +1,23 @@
 import React from 'react'
 import { VscTerminalUbuntu } from 'react-icons/vsc'
-import {  FaLinkedin, FaXTwitter, FaCode } from 'react-icons/fa6';
+import { FaLinkedin, FaXTwitter, FaCode } from 'react-icons/fa6';
+import Image from 'next/image';
 
 
 function Footer() {
     return (
         <div>
             <div className='relative text-white border-1 overflow-hidden border-neutral-600 bg-black  mt-10 p-3 md:p-10  rounded-t-2xl w-[300px] md:w-[1500px] "}'>
-                <img
+                import Image from 'next/image'
+
+                <Image
                     src="/gradi.png"
                     alt="gradient"
+                    width={1200}    // Set the width as per your requirement
+                    height={800}    // Set the height as per your requirement
                     className="absolute rounded-t-2xl inset-0 w-full h-full object-cover z-0 opacity-60"
                 />
+
                 <div className='flex justify-between z-50 relative'>
                     <div className='flex gap-2'>
                         <div className='flex flex-col justify-center'><VscTerminalUbuntu size={50} /></div>

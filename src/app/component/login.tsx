@@ -5,7 +5,7 @@ import { signIn } from 'next-auth/react';
 import { motion } from "framer-motion";
 import Spin from './ui/spinner';
 
-function Login({ setLogin }: { setLogin: any }) {
+function Login({ setLogin }: {   setLogin: React.Dispatch<React.SetStateAction<boolean>>}) {
     const [googleLoading, setGoogleLoading] = useState<ReactNode>("Google")
     const [gitLoading, setGithubLoading] = useState<ReactNode>("GitHub")
 

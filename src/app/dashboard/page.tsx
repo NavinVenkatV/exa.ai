@@ -6,6 +6,7 @@ import { FaArrowUp } from "react-icons/fa6";
 import axios from "axios";
 import Login from "../component/login";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -39,7 +40,7 @@ type QueryItem =
         text: string;
         author: string;
         reference: string;
-        image: any;
+        image: string;
         publishedDate: string;
       }[];
     };
@@ -65,6 +66,7 @@ function Child() {
       const res = await axios.post("/exa", { prompt: input });
       return res.data.result.results;
     } catch (e) {
+      console.log(e)
       return "Something went wrong!";
     }
   };
@@ -147,7 +149,7 @@ function Child() {
                           >
                             <p className="text-xl md:text-2xl">{res.title}</p>
                             {res.image && (
-                              <img
+                              <Image
                                 src={res.image}
                                 alt="Result"
                                 className="w-full h-[300px] md:h-[400px] mt-3 rounded-xl object-cover"
