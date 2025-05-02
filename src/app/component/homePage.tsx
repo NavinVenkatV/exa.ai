@@ -24,9 +24,11 @@ function HomePage() {
         </div>
       )}
       <div className='flex  items-center justify-center'>
-        <div className='flex flex-col justify-start mt-20 md:mt-32 items-center text-center'>
-          <h1 className='md:text-7xl text-2xl font-bold w-[300px] md:w-[800px]'>
-            Chat with the internet, not just search it
+        <div className='flex flex-col justify-start mt-14 md:mt-32 items-center text-center'>
+        <div className="bg-gradient-to-br from-[#0f0f0f] via-[#0b1b33] border-1 border-neutral-800 to-[#000000] animate-gradient text-sm rounded-2xl px-3 py-1 my-2">Currently in beta v1.0</div>
+
+          <h1 className='md:text-7xl text-4xl font-bold w-[300px] md:w-[800px]'>
+            Chat with the internet not just search it
           </h1>
           <p className='mt-3 w-[200px] md:w-[600px] text-neutral-500'>
             Meet Exa, your intelligent research assistant
@@ -53,7 +55,7 @@ function HomePage() {
           </div>
         </div>
       </div>
-      <div className="bg-gradient-to-b to-blue-950 pt-10 from-black">
+      <div className="bg-gradient-to-b from-[#0f0f0f] via-[#0b1b33] to-[#000000]">
         <div className="flex justify-center">
           <Pricing />
         </div>

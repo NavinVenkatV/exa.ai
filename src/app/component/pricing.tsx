@@ -20,7 +20,8 @@ const item3 = [
 
 function Pricing() {
   return (
-    <div className="relative rounded-2xl w-full max-w-[1400px] mx-auto text-white py-10 overflow-hidden">
+    <div className="relative bg-gradient-to-r from-[#1e1e2f] via-[#2a2a72] to-[#000000]
+ rounded-2xl w-full max-w-[1400px] mx-auto  text-white py-10 overflow-hidden">
 
       <div className="relative z-10">
         <div className="flex justify-center items-center text-center">
