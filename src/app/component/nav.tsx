@@ -1,11 +1,10 @@
 "use client"
-import React, { useEffect, useState } from 'react'
+import React, {  useEffect, useState } from 'react'
 import { VscTerminalUbuntu } from 'react-icons/vsc'
 import { useRouter } from 'next/navigation'
 // import { useSession, signOut } from 'next-auth/react'
 import { AnimatePresence, motion } from "framer-motion";
 import Hamburger from 'hamburger-react'
-import Image from 'next/image'
 
 function Nav({ setLogin }: { setLogin: React.Dispatch<React.SetStateAction<boolean>> }) {
     const router = useRouter();
@@ -14,11 +13,12 @@ function Nav({ setLogin }: { setLogin: React.Dispatch<React.SetStateAction<boole
     const [profile, setProfile] = useState(false);
     const [isOpen, setOpen] = useState(false);
 
-    // useEffect(() => {
-    //     if (status === 'authenticated') {
-    //         setUser(true)
-    //     }
-    // }, [status])
+    useEffect(() => {
+        // if (status === 'authenticated') {
+        //     setUser(true)
+        // }
+        setUser(true)
+    }, [])
 
     return (
         <>
