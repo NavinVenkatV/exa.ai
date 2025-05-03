@@ -39,7 +39,7 @@ function Faq() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, ease: 'easeInOut' }}
              className='text-3xl md:text-6xl text-center'>Have Questions? Exa has answers.</motion.p>
-            <div className="md:w-full max-w-xl mx-auto w-[350px] py-4">
+            <div className="md:w-full max-w-xl mx-auto w-auto py-4">
                 {faqs.map((q, i) => (
                     <div className='mt-10 ' key={i}>
                         <button

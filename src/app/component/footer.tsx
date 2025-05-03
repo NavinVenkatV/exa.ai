@@ -6,8 +6,8 @@ import Image from 'next/image';
 
 function Footer() {
     return (
-        <div>
-            <div className='relative text-white border-1 overflow-hidden border-neutral-600 bg-black  mt-10 p-3 md:p-10  rounded-t-2xl w-[370px] md:w-[1500px] "}'>
+        <div className='w-full flex justify-center'>
+            <div className='relative text-white border-1 overflow-hidden border-neutral-600 bg-black  mt-10 p-3 md:p-10  rounded-t-2xl w-full md:w-[1500px] "}'>
                 <Image
                     src="/gradi.png"
                     alt="gradient"

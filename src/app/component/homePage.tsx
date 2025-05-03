@@ -30,14 +30,14 @@ function HomePage() {
   };
   const [login, setLogin] = useState(false)
   return (
-    <div className={`w-full h-auto relative z-0 pt-28 overflow-hidden text-white ${spaceGrotesk.className}`}>
+    <div className={`w-full h-auto relative z-0 pt-28 px-2 overflow-hidden text-white ${spaceGrotesk.className}`}>
       <Nav setLogin={setLogin} />
       {login && (
         <div className="fixed inset-0 z-50 flex justify-center items-center backdrop-blur-sm bg-opacity-50">
           <Login setLogin={setLogin} />
         </div>
       )}
-      <div className='flex  items-center justify-center'>
+      <div className='flex w-full items-center justify-center'>
         <div className='flex flex-col justify-start mt-14 md:mt-32 items-center text-center'>
         <motion.div
        initial={{ opacity: 0, y: -20 }}
@@ -92,7 +92,7 @@ function HomePage() {
           </div>
         </div>
       </div>
-      <div className="bg-gradient-to-b from-[#0f0f0f] via-[#0b1b33] mt-10 to-[#000000]">
+      <div className="bg-gradient-to-b from-[#0f0f0f] via-[#0b1b33] mt-10 to-[#000000] px-2">
         <div className="flex justify-center">
           <Pricing />
         </div>
