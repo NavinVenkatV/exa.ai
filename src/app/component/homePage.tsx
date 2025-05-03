@@ -53,14 +53,14 @@ function HomePage() {
           >
             <motion.h1
               variants={fadeInUp}
-              className="md:text-7xl text-4xl font-bold w-[300px] md:w-[800px]"
+              className="md:text-7xl text-4xl font-bold w-[320px] md:w-[800px]"
             >
               Chat with the internet not just search it
             </motion.h1>
 
             <motion.p
               variants={fadeInUp}
-              className="mt-3 w-[200px] md:w-[600px] text-neutral-400"
+              className="mt-3 w-[300px] md:w-[600px] text-neutral-400"
             >
               Built for thinkers, makers, and the endlessly curious.
             </motion.p>
