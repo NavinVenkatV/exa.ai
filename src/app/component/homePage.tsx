@@ -62,11 +62,11 @@ function HomePage() {
               variants={fadeInUp}
               className="mt-3 w-[200px] md:w-[600px] text-neutral-400"
             >
-              Coming soon
+              Built for thinkers, makers, and the endlessly curious.
             </motion.p>
 
             <motion.div variants={fadeInUp} className="mt-10">
-              <Button title="Get Started" place="dashboard" />
+              <Button title="Get Started" place="dashboard" setLogin={setLogin}/>
             </motion.div>
           </motion.div>
           <div className='mt-12'>

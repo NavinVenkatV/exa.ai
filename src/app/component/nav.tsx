@@ -51,6 +51,7 @@ function Nav({ setLogin }: { setLogin: React.Dispatch<React.SetStateAction<boole
                         <div className='pl-5 hidden md:flex items-center justify-center gap-6'>
                             <p className='cursor-pointer'>Why Exa</p>
                             <p className='cursor-pointer'>Pricing</p>
+                            <p className='cursor-pointer'>Report Issue</p>
                         </div>
                     </div>
                 </div>
@@ -108,6 +109,7 @@ function Nav({ setLogin }: { setLogin: React.Dispatch<React.SetStateAction<boole
                                 <ul className="flex flex-col items-center gap-2">
                                     <li className="cursor-pointer hover:underline" onClick={() => setOpen(false)}>Why Exa</li>
                                     <li className="cursor-pointer hover:underline" onClick={() => setOpen(false)}>Pricing</li>
+                                    <li className="cursor-pointer hover:underline" onClick={() => setOpen(false)}>Report Issue</li>
                                     {!user ? (
                                         <li
                                             onClick={() => {
