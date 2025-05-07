@@ -99,9 +99,13 @@ function HomePage() {
         <div className='flex justify-center '>
           <div><Faq /></div>
         </div>
-        <div className="mt-4 w-full h-full flex items-center justify-center">
+        <motion.div 
+        initial={{y:100, opacity : 1}}
+        whileInView={{y:0, opacity : 1}}
+        transition={{duration:0.6, ease:'easeInOut'}}
+        className="mt-4 w-full h-full flex items-center justify-center">
           <Footer />
-        </div>
+        </motion.div>
       </div>
     </div>
   )

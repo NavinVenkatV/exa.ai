@@ -24,8 +24,7 @@ export default function Home() {
 
   return (
     <main>
-      <div className=" relative z-0 bg-gradient-to-r from-[#0f0f0f] via-[#0b1b33] to-[#000000] w-full h-auto">
-        
+      <div className=" relative z-0 bg-gradient-to-r from-[#0f0f0f] via-[#0b1b33] to-[#000000] w-full h-auto">   
         <HomePage />
       </div>
     </main>

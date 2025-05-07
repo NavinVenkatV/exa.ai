@@ -127,10 +127,18 @@ function Child() {
           <div className="w-full max-w-screen-lg mx-auto">
             {!showChatUi && (
               <>
-                <h1 className="text-2xl md:text-5xl text-center mt-10">{greeting} {session?.user ? session.user.name : ""}</h1>
-                <p className="text-md md:text-2xl mt-4 text-center mb-10 text-neutral-500">
+                <motion.h1
+                initial={{x:30, opacity : 0}}
+                animate={{x:0, opacity : 1}}
+                transition={{duration: 0.4, ease:'easeInOut'}}
+                 className="text-2xl md:text-5xl text-center mt-10">{greeting} {session?.user ? session.user.name : ""}</motion.h1>
+                <motion.p
+                initial={{x:-30, opacity : 0}}
+                animate={{x:0, opacity : 1}}
+                transition={{duration: 0.4, ease:'easeInOut'}}
+                 className="text-md md:text-2xl mt-4 text-center mb-10 text-neutral-500">
                   How can I help you today?
-                </p>
+                </motion.p>
               </>
             )}
 
