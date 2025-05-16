@@ -70,7 +70,7 @@ const handler = NextAuth({
         },
         async signIn({ user, account }) {
             if (account?.provider === "google" && user.email) {
-                let existingUser = await prisma.user.findFirst({
+                let existingUser = await prisma.user.findUnique({
                     where: { email: user.email }
                 });
                 if (!existingUser) {
